@@ -37,8 +37,13 @@ This project implements a Wasserstein GAN with Gradient Penalty (WGAN-GP) for ge
 - `engine.py`: Training loop and utilities
 - `utils.py`: Helper functions
 - `config.py`: Configuration parameters
+## Results and Reports
+For detailed results and visualizations, check out our [Weights & Biases report](https://api.wandb.ai/links/sanshruthr-misc/r0ra4ybu).
+| Name            | crit_loss (Max) | gen_loss (Max) | crit_loss (Min) | gen_loss (Min) | Runtime | GPU Type           | batch_size | epoch | lr     | model   | optimizer | crit_loss    | gen_loss    |
+|-----------------|-----------------|----------------|-----------------|----------------|---------|--------------------|------------|-------|--------|----------|-----------|--------------|-------------|
+| decent-water-2   | -5.9919         | 139.1709       | -93.3319        | -32.2147       |  4.71 hours  | Tesla P100-PCIE-16GB| 200        | 200   | 0.001  | wgan gp  | adam      | -62.4255     | 114.6643    |
+| flowing-energy-1 | 10.8647         | 94.0787        | -56.2638        | 0.0535         |  2.51 hours   | Tesla P100-PCIE-16GB| 100        | 100   | 0.0001 | wgan gp  | adam      | -49.3754     | 75.1708     |
 ## Acknowledgements
 - [Wasserstein GAN paper](https://arxiv.org/abs/1701.07875)
 - [CelebA Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
-## Results and Reports
-For detailed results and visualizations, check out our [Weights & Biases report](https://api.wandb.ai/links/sanshruthr-misc/r0ra4ybu).
+
